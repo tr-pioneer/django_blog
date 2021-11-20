@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %} {% block content %}
+
+<h2>{{user}} detail</h2>
+
+<div>
+    <img src="{{request.user.image.url}}" alt="">
+</div>
+<div>
+    {{user.first_name}}
+</div>
+<div>
+    {{user.last_name}}
+</div>
+<div>
+    {{user.email}}
+</div>
+<div>
+    {{user.phone}}
+</div>
+<div>
+    {{user.number}}
+</div>
+
+
+{% endblock content %}

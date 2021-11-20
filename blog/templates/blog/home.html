@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %} {% block content %}
+
+<h2>
+    {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
+        Welcome Admin!
+    {% else %}
+        Welcome To Clarusway Blog, {{request.user}}!
+    {% endif %}
+    {% else %}
+    <center>
+        Welcome To Blog App, Guest <br>
+    </center>
+    {% endif %}
+
+</h2>
+
+{% endblock content %}
